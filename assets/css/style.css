@@ -27,3 +27,7 @@ button, input {
     width: 50%;
     margin: 0 auto;
 }
+
+#main-container {
+    margin: 100px auto;
+}
