@@ -119,3 +119,68 @@ button, input {
     background: rgb(0, 0, 0);
     transition-duration: 0.3s;
 }
+
+#complete-msg {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+#complete-p {
+    padding: 20px 0;
+}
+
+#complete h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+
+#highscore-input-div {
+    margin-top: 20px;
+}
+
+input {
+    font-family: 'Nunito Sans', sans-serif;
+    background: rgb(255, 245, 211);
+    height: 28px;
+    border: none;
+}
+
+input:focus {
+    background: rgb(255, 219, 130);
+}
+
+#submit-highscore {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    background: rgb(242, 181, 28);
+    border: none;
+    height: 30px;
+    width: 75px;
+}
+
+#submit-highscore:hover {
+    color: white;
+    background: rgb(0, 0, 0);
+    transition-duration: 0.3s;
+}
+
+#input-message {
+    font-style: italic;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+#retake {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    border: 3px solid rgb(242, 181, 28);
+    height: 40px;
+    width: 220px;
+    margin-right: 50px;;
+}
+
+#retake:hover {
+    color: white;
+    background: rgb(242, 181, 28);
+    transition-duration: 0.3s;
+}
