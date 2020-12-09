@@ -223,3 +223,19 @@ var submitBtn = document.querySelector("#submit-highscore");
 var returnBtn = document.querySelector("#go-to-start");
 
 var userScores = [];
+
+function renderScores() {
+    highscoreList.innerHTML = "";
+    var sortedUserScores = userScores.sort(function(a, b) {
+        return b.userHighscore - a.userHighscore;
+    });
+
+    for (var i = 0; i < userScores.length; i++) {
+  
+       var li = document.createElement("li");
+       li.textContent = sortedUserScores[i].userName + "'s score: " + sortedUserScores[i].userHighscore;
+       li.setAttribute("index", i);
+  
+       highscoreList.appendChild(li);
+    }
+}
