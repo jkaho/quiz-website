@@ -39,6 +39,7 @@ function showQuestions(event) {
         startDiv.setAttribute("class", "hide");
         questionsDiv.setAttribute("class", "show");
         highscoreLink.setAttribute("class", "hide");
+        console.log(startIndex);
 
 }
 
@@ -154,11 +155,11 @@ function changeQuestions(event) {
         } else if (userScore > 11 && userScore <= 13) {
             userScoreMsgEl.textContent = ", good job!";
         } else if (userScore > 13 && userScore <= 15) {
-            userScoreMsgEl.textContent = ", you're pretty knowledgeable!";
+            userScoreMsgEl.textContent = "... you're pretty knowledgeable!";
         } else if (userScore > 15 && userScore <= 17) {
-            userScoreMsgEl.textContent = ", wow, impressive!";
+            userScoreMsgEl.textContent = "... wow, impressive!";
         } else if (userScore > 17 && userScore <= 19) {
-            userScoreMsgEl.textContent = ", you cheated, didn't you?";
+            userScoreMsgEl.textContent = "... you cheated, didn't you?";
         } else {
             userScoreMsgEl.textContent = "... WHO ARE YOU?!";
         }
@@ -168,8 +169,9 @@ function changeQuestions(event) {
         questionCounter = 20;
         questionNumber = 1;
         timeLeft = 120;
-        return;  
+        return;
     }
+    console.log(currentIndex);
 }
 
 var countdownEl = document.querySelector("#countdown");
