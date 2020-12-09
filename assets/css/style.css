@@ -1,6 +1,10 @@
+/* GLOBAL RESET */
+
 * {
     margin: 0;
 }
+
+/* GENERAL */
 
 .hide {
     display: none;
@@ -22,6 +26,8 @@ p {
 button, input {
     outline: none;
 }
+
+/* TOP CONTAINER */
 
 #top-container {
     background: rgb(242, 181, 28); 
@@ -51,10 +57,13 @@ button, input {
     margin: 0 auto;
 }
 
+/* MAIN CONTAINER */
+
 #main-container {
     margin: 100px auto;
 }
 
+/* start div */
 #start-btn-div {
     text-align: center;
 }
@@ -79,6 +88,7 @@ button, input {
     transition-duration: 0.3s;
 }
 
+/* questions div */
 #questions h4 {
     font-family: 'Nunito Sans', sans-serif;
     padding: 20px 0;
@@ -120,6 +130,7 @@ button, input {
     transition-duration: 0.3s;
 }
 
+/* complete div */
 #complete-msg {
     font-family: 'JetBrains Mono', monospace;
 }
@@ -185,6 +196,7 @@ input:focus {
     transition-duration: 0.3s;
 }
 
+/* highscores div */
 ol {
     padding: 40px 0 20px 0;
 }
@@ -228,6 +240,17 @@ li {
     transition-duration: 0.3s;
 }
 
+/*  MEDIA QUERIES */
+
+/* small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) { 
+    #questions, #complete, #highscores {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* large devices (desktops, 992px and down) */
 @media (max-width: 992px) { 
     #go-to-start, #clear-highscores {
         width: 80%;
