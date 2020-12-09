@@ -46,6 +46,35 @@ function checkBin() {
 checkBin();
 questionBin.push(currentIndex);
 
+var nextBtn = document.querySelector("#next-question");
+var nextDiv = document.querySelector("#next-div");
+
+function changeQuestions(event) { 
+    event.preventDefault();
+    event.stopPropagation();
+    
+    var currentQuestion = questionArr[currentIndex];
+    
+    
+        currentIndex = Math.floor(Math.random() * questionArr.length);
+        checkBin();
+        questionBin.push(currentIndex);
+        currentQuestion = questionArr[currentIndex];
+    
+    
+        if (questionCounter > 0) {
+            questionCounter--;
+            questionNumber++;
+            questionNumberEl.textContent = questionNumber;
+            questionTextEl.textContent = currentQuestion.question;
+            firstBtn.textContent = currentQuestion.firstOption;
+            secondBtn.textContent = currentQuestion.secondOption;
+            thirdBtn.textContent = currentQuestion.thirdOption;
+            fourthBtn.textContent = currentQuestion.fourthOption;
+            
+        } 
+}
+
 var countdownEl = document.querySelector("#countdown");
 var timeLeft = 120;
 
@@ -67,3 +96,4 @@ function timer() {
 
 startBtn.addEventListener("click", timer);
 startBtn.addEventListener("click", showQuestions);
+nextBtn.addEventListener("click", changeQuestions);
