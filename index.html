@@ -33,7 +33,18 @@
                 <button id="next-question">Next</button>
             </div>
         </div>
-        <div id="complete"></div>
+        <div id="complete">
+            <h3 id="complete-msg">You answered all the questions within the time limit!</h3>
+            <p id="complete-p">You scored <span id="user-score">0</span><span id="user-score-msg">placeholder message.</span></p>
+            <h4>Save your score</h4>
+            <div id="highscore-input-div">
+                <input type="text" id="highscore-input" placeholder="Enter your name"><button id="submit-highscore">Submit</button>
+            </div>
+            <p id="input-message"></p>
+            <h4>OR</h4>
+            <br>
+            <button id="retake">Retake Quiz</button>   
+        </div>
         <div id="highscores"></div>
     </div>
     <script src="script.js"></script>
