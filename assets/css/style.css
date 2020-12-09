@@ -22,3 +22,8 @@ p {
 button, input {
     outline: none;
 }
+
+#questions, #complete, #highscores {
+    width: 50%;
+    margin: 0 auto;
+}
