@@ -78,3 +78,25 @@ button, input {
     background: rgb(242, 181, 28);
     transition-duration: 0.3s;
 }
+
+#questions h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 20px 0;
+}
+
+#answer-buttons button {
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    background: rgb(254, 224, 149);
+    border: none;
+    height: 30px;
+    width: 90%;
+    margin: 5px auto;
+}
+
+#answer-buttons button:hover {
+    color: white;
+    background: rgb(242, 181, 28);
+    transition-duration: 0.3s;
+}
