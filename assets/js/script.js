@@ -2,6 +2,15 @@ var startBtn = document.querySelector("#start-quiz");
 var startDiv = document.querySelector("#start");
 var questionsDiv = document.querySelector("#questions");
 
+var questionNumberEl = document.querySelector("#question-number");
+var questionTextEl = document.querySelector("#question");
+var firstBtn = document.querySelector("#first-option");
+var secondBtn = document.querySelector("#second-option");
+var thirdBtn = document.querySelector("#third-option");
+var fourthBtn = document.querySelector("#fourth-option");
+var questionCounter = 20;
+var questionNumber = 1;
+
 var countdownEl = document.querySelector("#countdown");
 var timeLeft = 120;
 
