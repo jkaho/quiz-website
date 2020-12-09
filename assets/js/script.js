@@ -38,6 +38,8 @@ function showQuestions(event) {
 
         startDiv.setAttribute("class", "hide");
         questionsDiv.setAttribute("class", "show");
+        highscoreLink.setAttribute("class", "hide");
+
 }
 
 var currentIndex = Math.floor(Math.random() * questionArr.length); // Question 2
