@@ -74,7 +74,12 @@ function scoreIncrement(event) {
             event.target.setAttribute("style", "border: 2px solid rgb(218, 72, 72)");
 
             var correctBtn = document.querySelector(startQuestion.correctAnswer);
-            correctBtn.setAttribute("style", "border: 2px solid rgb(116, 222, 116)"); // set border
+            correctBtn.setAttribute("style", "border: 2px solid rgb(116, 222, 116)");
+
+            countdownEl.setAttribute("style", "color: rgb(218, 72, 72)"); 
+            setTimeout(function() {
+                countdownEl.removeAttribute("style");
+            }, 1000)
         } else if (event.target.matches(currentQuestion.correctAnswer) === true) {
             userScore++;
     
@@ -86,6 +91,11 @@ function scoreIncrement(event) {
     
             var correctBtn = document.querySelector(currentQuestion.correctAnswer);
             correctBtn.setAttribute("style", "border: 2px solid rgb(116, 222, 116)");
+
+            countdownEl.setAttribute("style", "color: rgb(218, 72, 72)"); 
+            setTimeout(function() {
+                countdownEl.removeAttribute("style");
+            }, 1000)
         }
         firstBtn.setAttribute("disabled", "disabled");
         secondBtn.setAttribute("disabled", "disabled");
