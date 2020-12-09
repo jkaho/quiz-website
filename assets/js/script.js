@@ -17,6 +17,22 @@ var startIndex = Math.floor(Math.random() * questionArr.length);
 var startQuestion = questionArr[startIndex];
 questionBin.push(startIndex);
 
+function showQuestions(event) {
+    event.preventDefault();
+        questionCounter--; // 14 
+        questionNumberEl.textContent = questionNumber;
+        questionTextEl.textContent = startQuestion.question;
+        firstBtn.textContent = startQuestion.firstOption;
+        secondBtn.textContent = startQuestion.secondOption;
+        thirdBtn.textContent = startQuestion.thirdOption;
+        fourthBtn.textContent = startQuestion.fourthOption;
+        // questionNumber++; // 2
+
+        startDiv.setAttribute("class", "hide");
+        questionsDiv.setAttribute("class", "show");
+        console.log(startIndex);
+}
+
 var countdownEl = document.querySelector("#countdown");
 var timeLeft = 120;
 
@@ -37,3 +53,4 @@ function timer() {
 }
 
 startBtn.addEventListener("click", timer);
+startBtn.addEventListener("click", showQuestions);
