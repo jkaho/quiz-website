@@ -8,8 +8,14 @@ var firstBtn = document.querySelector("#first-option");
 var secondBtn = document.querySelector("#second-option");
 var thirdBtn = document.querySelector("#third-option");
 var fourthBtn = document.querySelector("#fourth-option");
+
 var questionCounter = 20;
 var questionNumber = 1;
+var questionBin = [];
+
+var startIndex = Math.floor(Math.random() * questionArr.length);
+var startQuestion = questionArr[startIndex];
+questionBin.push(startIndex);
 
 var countdownEl = document.querySelector("#countdown");
 var timeLeft = 120;
