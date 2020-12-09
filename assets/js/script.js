@@ -204,7 +204,7 @@ var highscoreLink = document.querySelector("#view-highscores");
 retakeBtn.addEventListener("click", function() {
     questionArrIndex = 0;
     userScore = 0;
-    timeLeft = 60; //Added 
+    timeLeft = 120; 
     startDiv.setAttribute("class", "show");
     completeDiv.setAttribute("class", "hide");
     highscoreLink.setAttribute("class", "show");
@@ -216,3 +216,10 @@ highscoreLink.addEventListener("click", function() {
     highscoreLink.setAttribute("class", "hide");
 })
 
+var userInputEl = document.querySelector("#highscore-input");
+var inputMessageEl = document.querySelector("#input-message");
+var highscoreList = document.querySelector("#highscore-list");
+var submitBtn = document.querySelector("#submit-highscore");
+var returnBtn = document.querySelector("#go-to-start");
+
+var userScores = [];
