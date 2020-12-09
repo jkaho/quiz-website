@@ -1000,12 +1000,12 @@ var questionArr = [
     },
     {
         // questionNumber: "Science-12",
-        question: "What is the best definition of kinetic energy?",
+        question: "Which of the following is the best definition of kinetic energy?",
         firstOption: "Energy stored within an object that is at rest",
         secondOption: "Energy that an object possesses due to its motion",
         thirdOption: "Energy created by heat",
         fourthOption: "Energy from the sun",
-        correctAnswer: "#third-option"
+        correctAnswer: "#second-option"
     },
     {
         // questionNumber: "Science-13",
