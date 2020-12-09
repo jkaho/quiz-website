@@ -248,6 +248,8 @@ var inputMessageEl = document.querySelector("#input-message");
 var highscoreList = document.querySelector("#highscore-list");
 var submitBtn = document.querySelector("#submit-highscore");
 var returnBtn = document.querySelector("#go-to-start");
+var clearBtn = document.querySelector("#clear-highscores");
+
 
 var userScores = [];
 
@@ -318,3 +320,13 @@ returnBtn.addEventListener("click", function() {
     startDiv.setAttribute("class", "show");
     highscoreLink.setAttribute("class", "show");
 })
+
+clearBtn.addEventListener("click", function() {
+    var confirmClear = confirm("Are you sure you want to clear the highscore list?");
+    if (confirmClear) {
+        localStorage.clear();
+        highscoreList.textContent = "";
+    } else {
+        return;
+    }
+});
