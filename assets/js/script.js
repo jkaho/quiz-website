@@ -113,6 +113,10 @@ function changeQuestions(event) {
     } else {
         questionsDiv.setAttribute("class", "hide");
         completeDiv.setAttribute("class", "show");
+        questionBin = [];
+        questionCounter = 20;
+        questionNumber = 1;
+        timeLeft = 120;
         return;  
     }
 }
@@ -127,7 +131,9 @@ function timer() {
             countdownEl.innerHTML = 0;
             questionsDiv.setAttribute("class", "hide");
             completeDiv.setAttribute("class", "show");
-            timeLeft = 120;
+            questionBin = [];
+            questionCounter = 20;
+            questionNumber = 1;
             timeLeft = 120;
         } else {
             countdownEl.innerHTML = timeLeft;
