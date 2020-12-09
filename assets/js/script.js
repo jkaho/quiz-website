@@ -239,3 +239,17 @@ function renderScores() {
        highscoreList.appendChild(li);
     }
 }
+
+function initialise() {
+    var storedScores = JSON.parse(localStorage.getItem("userScores"));
+  
+    if (storedScores !== null) {
+      userScores = storedScores;
+    }
+  
+    renderScores();
+}
+
+function storeScores() {
+    localStorage.setItem("userScores", JSON.stringify(userScores));
+}
