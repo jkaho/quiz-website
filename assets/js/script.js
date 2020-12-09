@@ -283,3 +283,11 @@ submitBtn.addEventListener("click", function(event) {
     completeDiv.setAttribute("class", "hide");
     highscoresDiv.setAttribute("class", "show");
 });
+
+returnBtn.addEventListener("click", function() {
+    questionArrIndex = 0;
+    userScore = 0;
+    highscoresDiv.setAttribute("class", "hide");
+    startDiv.setAttribute("class", "show");
+    highscoreLink.setAttribute("class", "show");
+})
