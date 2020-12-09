@@ -224,6 +224,8 @@ var returnBtn = document.querySelector("#go-to-start");
 
 var userScores = [];
 
+initialise();
+
 function renderScores() {
     highscoreList.innerHTML = "";
     var sortedUserScores = userScores.sort(function(a, b) {
@@ -253,3 +255,31 @@ function initialise() {
 function storeScores() {
     localStorage.setItem("userScores", JSON.stringify(userScores));
 }
+
+submitBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    var user = {
+        userName: userInputEl.value.trim(),
+        userHighscore: userScore,
+    };
+    
+    if (user.userName === "") {
+        inputMessageEl.textContent = "You can't submit your score without a name";
+        return;
+    }   else if (userScores.includes(user.userName + "'s score: " + user.userHighscore)) {
+        inputMessageEl.textContent = "An entry for that name and score already exists. Please use a different name.";
+        return;
+    }   else {
+        inputMessageEl.textContent = "Your score has successfully been submitted";
+    }
+  
+    userScores.push(user);
+    userInputEl.value = "";
+  
+    storeScores();
+    renderScores();
+    inputMessageEl.textContent = "";
+    completeDiv.setAttribute("class", "hide");
+    highscoresDiv.setAttribute("class", "show");
+});
