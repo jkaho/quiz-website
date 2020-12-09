@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>General Knowledge Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             </p>
             <div id="start-btn-div"><button id="start-quiz">Start Quiz</button></div>
         </div>
-        <div id="questions">
+        <div id="questions" class="hide">
             <h4><span id="question-number"></span>. <span id="question"></span></h4>
             <div id="answer-buttons" class="">
                 <button id="first-option" class=""></button>
@@ -33,7 +33,7 @@
                 <button id="next-question">Next</button>
             </div>
         </div>
-        <div id="complete">
+        <div id="complete" class="hide">
             <h3 id="complete-msg">You answered all the questions within the time limit!</h3>
             <p id="complete-p">You scored <span id="user-score">0</span><span id="user-score-msg">placeholder message.</span></p>
             <h4>Save your score</h4>
@@ -45,7 +45,7 @@
             <br>
             <button id="retake">Retake Quiz</button>   
         </div>
-        <div id="highscores">
+        <div id="highscores" class="hide">
             <h2>Highscore List</h2>
             <ol id="highscore-list"></ol>
             <div id="highscore-list-buttons">
@@ -54,6 +54,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
