@@ -340,6 +340,7 @@ returnBtn.addEventListener("click", function() {
     highscoreLink.setAttribute("class", "show");
 })
 
+// clear highscore list
 clearBtn.addEventListener("click", function() {
     var confirmClear = confirm("Are you sure you want to clear the highscore list?");
     if (confirmClear) {
