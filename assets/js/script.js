@@ -33,6 +33,19 @@ function showQuestions(event) {
         console.log(startIndex);
 }
 
+var currentIndex = Math.floor(Math.random() * questionArr.length); // Question 2
+
+function checkBin() {
+    for (var i = 0; i < 1; i++) {
+        if (questionBin.includes(currentIndex) && questionBin.length < 21) {
+            currentIndex = Math.floor(Math.random() * questionArr.length);
+            i--;
+        } 
+    }
+}
+checkBin();
+questionBin.push(currentIndex);
+
 var countdownEl = document.querySelector("#countdown");
 var timeLeft = 120;
 
