@@ -179,7 +179,7 @@ function changeQuestions(event) {
         } else if (userScore > 17 && userScore <= 19) {
             userScoreMsgEl.textContent = "... you cheated, didn't you?";
         } else {
-            userScoreMsgEl.textContent = "... WHO ARE YOU?!";
+            userScoreMsgEl.textContent = "... WHO ARE YOU!?";
         }
 
         questionsDiv.setAttribute("class", "hide");
@@ -226,7 +226,7 @@ function countdown() {
             } else if (userScore > 17 && userScore <= 19) {
                 userScoreMsgEl.textContent = ", you cheated, didn't you?";
             } else {
-                userScoreMsgEl.textContent = "... WHO ARE YOU?!";
+                userScoreMsgEl.textContent = "... WHO ARE YOU!?";
             }
 
             questionsDiv.setAttribute("class", "hide");
