@@ -100,3 +100,22 @@ button, input {
     background: rgb(242, 181, 28);
     transition-duration: 0.3s;
 }
+
+#next-div {
+    text-align: center;
+}
+
+#next-question {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    height: 35px;
+    width: 90%;
+}
+
+#next-question:hover {
+    color: white;
+    background: rgb(0, 0, 0);
+    transition-duration: 0.3s;
+}
