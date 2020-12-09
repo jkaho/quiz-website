@@ -296,12 +296,7 @@ submitBtn.addEventListener("click", function(event) {
     if (user.userName === "") {
         inputMessageEl.textContent = "You can't submit your score without a name";
         return;
-    }   else if (userScores.includes(user.userName + "'s score: " + user.userHighscore)) {
-        inputMessageEl.textContent = "An entry for that name and score already exists. Please use a different name.";
-        return;
-    }   else {
-        inputMessageEl.textContent = "Your score has successfully been submitted";
-    }
+    } 
   
     userScores.push(user);
     userInputEl.value = "";
