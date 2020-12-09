@@ -46,6 +46,34 @@ function checkBin() {
 checkBin();
 questionBin.push(currentIndex);
 
+var userScore = 0;
+var answerBtnDiv = document.querySelector("#answer-buttons");
+
+function scoreIncrement(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    var currentQuestion = questionArr[currentIndex];
+
+    if (event.target.matches("button")) {
+        if (questionNumber == 1 && event.target.matches(startQuestion.correctAnswer) === true) {
+            userScore++;
+
+        } else if (questionNumber == 1 && event.target.matches(startQuestion.correctAnswer) === false){
+            timeLeft -= 5;
+
+        } else if (event.target.matches(currentQuestion.correctAnswer) === true) {
+            userScore++;
+
+        } else {
+            timeLeft -= 5;
+        
+        }
+        console.log(userScore);
+    }
+}
+
+
 var nextBtn = document.querySelector("#next-question");
 var nextDiv = document.querySelector("#next-div");
 
@@ -56,23 +84,23 @@ function changeQuestions(event) {
     var currentQuestion = questionArr[currentIndex];
     
     
-        currentIndex = Math.floor(Math.random() * questionArr.length);
-        checkBin();
-        questionBin.push(currentIndex);
-        currentQuestion = questionArr[currentIndex];
+    currentIndex = Math.floor(Math.random() * questionArr.length);
+    checkBin();
+    questionBin.push(currentIndex);
+    currentQuestion = questionArr[currentIndex];
     
     
-        if (questionCounter > 0) {
-            questionCounter--;
-            questionNumber++;
-            questionNumberEl.textContent = questionNumber;
-            questionTextEl.textContent = currentQuestion.question;
-            firstBtn.textContent = currentQuestion.firstOption;
-            secondBtn.textContent = currentQuestion.secondOption;
-            thirdBtn.textContent = currentQuestion.thirdOption;
-            fourthBtn.textContent = currentQuestion.fourthOption;
+    if (questionCounter > 0) {
+        questionCounter--;
+        questionNumber++;
+        questionNumberEl.textContent = questionNumber;
+        questionTextEl.textContent = currentQuestion.question;
+        firstBtn.textContent = currentQuestion.firstOption;
+        secondBtn.textContent = currentQuestion.secondOption;
+        thirdBtn.textContent = currentQuestion.thirdOption;
+        fourthBtn.textContent = currentQuestion.fourthOption;
             
-        } 
+    } 
 }
 
 var countdownEl = document.querySelector("#countdown");
@@ -97,3 +125,4 @@ function timer() {
 startBtn.addEventListener("click", timer);
 startBtn.addEventListener("click", showQuestions);
 nextBtn.addEventListener("click", changeQuestions);
+answerBtnDiv.addEventListener("click", scoreIncrement);
