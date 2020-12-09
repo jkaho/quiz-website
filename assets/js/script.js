@@ -1,50 +1,71 @@
-var startBtn = document.querySelector("#start-quiz");
+// #start div elements
 var startDiv = document.querySelector("#start");
-var questionsDiv = document.querySelector("#questions");
+var startBtn = document.querySelector("#start-quiz");
 
+// #questions div elements
+var questionsDiv = document.querySelector("#questions");
 var questionNumberEl = document.querySelector("#question-number");
 var questionTextEl = document.querySelector("#question");
+
+var answerBtnDiv = document.querySelector("#answer-buttons");
 var firstBtn = document.querySelector("#first-option");
 var secondBtn = document.querySelector("#second-option");
 var thirdBtn = document.querySelector("#third-option");
 var fourthBtn = document.querySelector("#fourth-option");
-var questionCounter = 20;
-var questionNumber = 1;
 
+var nextBtn = document.querySelector("#next-question");
+var nextDiv = document.querySelector("#next-div");
+
+// #complete div elements
 var completeDiv = document.querySelector("#complete");
 var completeMsg = document.querySelector("#complete-msg");
 var userScoreEl = document.querySelector("#user-score");
 var userScoreMsgEl = document.querySelector("#user-score-msg");
+var userInputEl = document.querySelector("#highscore-input");
+var inputMessageEl = document.querySelector("#input-message");
+var clearBtn = document.querySelector("#clear-highscores");
+var retakeBtn = document.querySelector("#retake");
+
+// #highscores div elements
+var highscoresDiv = document.querySelector("#highscores");
+var highscoreList = document.querySelector("#highscore-list");
+var submitBtn = document.querySelector("#submit-highscore");
+var returnBtn = document.querySelector("#go-to-start");
+
+// global variables for use in functions
+var questionCounter = 20;
+var questionNumber = 1;
+var questionBin = [];
 var userScore = 0;
 
-var highscoresDiv = document.querySelector("#highscores");
-
-var questionBin = [];
-
-
+// question array index number generator for question 1
 var startIndex = Math.floor(Math.random() * questionArr.length);
 var startQuestion = questionArr[startIndex];
 questionBin.push(startIndex);
 
+// show question 1 when start button is clicked (event listener at line 289) 
 function showQuestions(event) {
     event.preventDefault();
-        questionCounter--; 
-        questionNumberEl.textContent = questionNumber;
-        questionTextEl.textContent = startQuestion.question;
-        firstBtn.textContent = startQuestion.firstOption;
-        secondBtn.textContent = startQuestion.secondOption;
-        thirdBtn.textContent = startQuestion.thirdOption;
-        fourthBtn.textContent = startQuestion.fourthOption;
 
-        startDiv.setAttribute("class", "hide");
-        questionsDiv.setAttribute("class", "show");
-        highscoreLink.setAttribute("class", "hide");
-        console.log(startIndex);
+    questionCounter--; 
 
+    questionNumberEl.textContent = questionNumber;
+    questionTextEl.textContent = startQuestion.question;
+    firstBtn.textContent = startQuestion.firstOption;
+    secondBtn.textContent = startQuestion.secondOption;
+    thirdBtn.textContent = startQuestion.thirdOption;
+    fourthBtn.textContent = startQuestion.fourthOption;
+
+    startDiv.setAttribute("class", "hide");
+    questionsDiv.setAttribute("class", "show");
+    highscoreLink.setAttribute("class", "hide");
 }
 
-var currentIndex = Math.floor(Math.random() * questionArr.length); // Question 2
+// question array index number generator for rest of questions
+var currentIndex = Math.floor(Math.random() * questionArr.length);
+var currentQuestion = questionArr[currentIndex];
 
+// check that index number hasn't already been used
 function checkBin() {
     for (var i = 0; i < 1; i++) {
         if (questionBin.includes(currentIndex) && questionBin.length < 21) {
@@ -53,18 +74,14 @@ function checkBin() {
         } 
     }
 }
+
 checkBin();
 questionBin.push(currentIndex);
 
-var answerBtnDiv = document.querySelector("#answer-buttons");
-var nextBtn = document.querySelector("#next-question");
-var nextDiv = document.querySelector("#next-div");
-
+// increment score for correct answers when an answer button is clicked (event listener at line 290)
 function scoreIncrement(event) {
     event.preventDefault();
     event.stopPropagation();
-    
-    var currentQuestion = questionArr[currentIndex];
 
     if (event.target.matches("button")) {
         if (questionNumber == 1 && event.target.matches(startQuestion.correctAnswer) === true) {
@@ -75,7 +92,6 @@ function scoreIncrement(event) {
             timeLeft -= 5;
 
             event.target.setAttribute("style", "border: 2px solid rgb(218, 72, 72)");
-
             var correctBtn = document.querySelector(startQuestion.correctAnswer);
             correctBtn.setAttribute("style", "border: 2px solid rgb(116, 222, 116)");
 
@@ -91,7 +107,6 @@ function scoreIncrement(event) {
             timeLeft -= 5;
 
             event.target.setAttribute("style", "border: 2px solid rgb(218, 72, 72)");
-    
             var correctBtn = document.querySelector(currentQuestion.correctAnswer);
             correctBtn.setAttribute("style", "border: 2px solid rgb(116, 222, 116)");
 
@@ -100,30 +115,32 @@ function scoreIncrement(event) {
                 countdownEl.removeAttribute("style");
             }, 1000)
         }
+        
+        nextDiv.setAttribute("class", "show");
+
         firstBtn.setAttribute("disabled", "disabled");
         secondBtn.setAttribute("disabled", "disabled");
         thirdBtn.setAttribute("disabled", "disabled");
         fourthBtn.setAttribute("disabled", "disabled");
-        nextDiv.setAttribute("class", "show");
     } 
 }
 
+// change questions when next button is clicked (event listener at line 291)
 function changeQuestions(event) { 
     event.preventDefault();
     event.stopPropagation();
-    nextDiv.setAttribute("class", "hide");
 
     firstBtn.setAttribute("style", "border: none");
     secondBtn.setAttribute("style", "border: none");
     thirdBtn.setAttribute("style", "border: none");
     fourthBtn.setAttribute("style", "border: none");
 
+    nextDiv.setAttribute("class", "hide");
+
     firstBtn.removeAttribute("disabled");
     secondBtn.removeAttribute("disabled");
     thirdBtn.removeAttribute("disabled");
     fourthBtn.removeAttribute("disabled");
-
-    var currentQuestion = questionArr[currentIndex];
     
     currentIndex = Math.floor(Math.random() * questionArr.length);
     checkBin();
@@ -133,6 +150,7 @@ function changeQuestions(event) {
     if (questionCounter > 0) {
         questionCounter--;
         questionNumber++;
+
         questionNumberEl.textContent = questionNumber;
         questionTextEl.textContent = currentQuestion.question;
         firstBtn.textContent = currentQuestion.firstOption;            
@@ -163,21 +181,25 @@ function changeQuestions(event) {
         } else {
             userScoreMsgEl.textContent = "... WHO ARE YOU?!";
         }
+
         questionsDiv.setAttribute("class", "hide");
         completeDiv.setAttribute("class", "show");
+
         questionBin = [];
         questionCounter = 20;
         questionNumber = 1;
         timeLeft = 120;
+
         return;
     }
-    console.log(currentIndex);
 }
 
+// countdown variables 
 var countdownEl = document.querySelector("#countdown");
 var timeLeft = 120;
 
-function timer() {
+// countdown begins when start button is clicked (event listener at line 288)
+function countdown() {
     var timerVar = setInterval(function() {
         if (timeLeft < 0) {
             clearInterval(timerVar);
@@ -206,8 +228,10 @@ function timer() {
             } else {
                 userScoreMsgEl.textContent = "... WHO ARE YOU?!";
             }
+
             questionsDiv.setAttribute("class", "hide");
             completeDiv.setAttribute("class", "show");
+            
             questionBin = [];
             questionCounter = 20;
             questionNumber = 1;
@@ -222,41 +246,12 @@ function timer() {
     }, 1000);
 }
 
-startBtn.addEventListener("click", timer);
-startBtn.addEventListener("click", showQuestions);
-answerBtnDiv.addEventListener("click", scoreIncrement);
-nextBtn.addEventListener("click", changeQuestions);
-
-var retakeBtn = document.querySelector("#retake");
-var highscoreLink = document.querySelector("#view-highscores");
-
-retakeBtn.addEventListener("click", function() {
-    questionArrIndex = 0;
-    userScore = 0;
-    timeLeft = 120; 
-    startDiv.setAttribute("class", "show");
-    completeDiv.setAttribute("class", "hide");
-    highscoreLink.setAttribute("class", "show");
-})
-
-highscoreLink.addEventListener("click", function() {
-    startDiv.setAttribute("class", "hide");
-    highscoresDiv.setAttribute("class", "show");
-    highscoreLink.setAttribute("class", "hide");
-})
-
-var userInputEl = document.querySelector("#highscore-input");
-var inputMessageEl = document.querySelector("#input-message");
-var highscoreList = document.querySelector("#highscore-list");
-var submitBtn = document.querySelector("#submit-highscore");
-var returnBtn = document.querySelector("#go-to-start");
-var clearBtn = document.querySelector("#clear-highscores");
-
-
+// ------------------ client-side storage for scores ------------------ //
 var userScores = [];
 
 initialise();
 
+// render stored scores into list (refer to line 310)
 function renderScores() {
     highscoreList.innerHTML = "";
     var sortedUserScores = userScores.sort(function(a, b) {
@@ -273,6 +268,7 @@ function renderScores() {
     }
 }
 
+// get stored scores from local storage
 function initialise() {
     var storedScores = JSON.parse(localStorage.getItem("userScores"));
   
@@ -283,9 +279,33 @@ function initialise() {
     renderScores();
 }
 
+// store scores in local storage (refer to line 310)
 function storeScores() {
     localStorage.setItem("userScores", JSON.stringify(userScores));
 }
+
+// ------------------ event listeners ------------------ //
+startBtn.addEventListener("click", countdown);
+startBtn.addEventListener("click", showQuestions);
+answerBtnDiv.addEventListener("click", scoreIncrement);
+nextBtn.addEventListener("click", changeQuestions);
+
+var highscoreLink = document.querySelector("#view-highscores");
+highscoreLink.addEventListener("click", function() {
+    startDiv.setAttribute("class", "hide");
+    highscoresDiv.setAttribute("class", "show");
+    highscoreLink.setAttribute("class", "hide");
+})
+
+retakeBtn.addEventListener("click", function() {
+    questionArrIndex = 0;
+    userScore = 0;
+    timeLeft = 120; 
+
+    startDiv.setAttribute("class", "show");
+    completeDiv.setAttribute("class", "hide");
+    highscoreLink.setAttribute("class", "show");
+})
 
 submitBtn.addEventListener("click", function(event) {
     event.preventDefault();
@@ -306,6 +326,7 @@ submitBtn.addEventListener("click", function(event) {
     storeScores();
     renderScores();
     inputMessageEl.textContent = "";
+
     completeDiv.setAttribute("class", "hide");
     highscoresDiv.setAttribute("class", "show");
 });
@@ -313,6 +334,7 @@ submitBtn.addEventListener("click", function(event) {
 returnBtn.addEventListener("click", function() {
     questionArrIndex = 0;
     userScore = 0;
+    
     highscoresDiv.setAttribute("class", "hide");
     startDiv.setAttribute("class", "show");
     highscoreLink.setAttribute("class", "show");
