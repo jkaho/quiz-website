@@ -344,12 +344,14 @@ returnBtn.addEventListener("click", function() {
 clearBtn.addEventListener("click", function() {
     if (userScores.length < 1) {
         alert("There are no existing scores to clear.");
-    }
-    var confirmClear = confirm("Are you sure you want to clear the highscore list?");
-    if (confirmClear) {
-        localStorage.clear();
-        highscoreList.textContent = "";
     } else {
-        return;
+        var confirmClear = confirm("Are you sure you want to clear the highscore list?");
+        if (confirmClear) {
+            localStorage.clear();
+            highscoreList.textContent = "";
+        } else {
+            return;
+        }
     }
+    
 });
