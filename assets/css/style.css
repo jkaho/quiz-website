@@ -228,5 +228,12 @@ li {
     transition-duration: 0.3s;
 }
 
+@media (max-width: 992px) { 
+    #go-to-start, #clear-highscores {
+        width: 80%;
+        margin: 5px auto;
+    }
+}
+
 
 
