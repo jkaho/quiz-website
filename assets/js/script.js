@@ -301,6 +301,7 @@ retakeBtn.addEventListener("click", function() {
     questionArrIndex = 0;
     userScore = 0;
     timeLeft = 120; 
+    inputMessageEl.textContent = "";
 
     startDiv.setAttribute("class", "show");
     completeDiv.setAttribute("class", "hide");
@@ -334,6 +335,7 @@ submitBtn.addEventListener("click", function(event) {
 returnBtn.addEventListener("click", function() {
     questionArrIndex = 0;
     userScore = 0;
+    inputMessageEl.textContent = "";
     
     highscoresDiv.setAttribute("class", "hide");
     startDiv.setAttribute("class", "show");
