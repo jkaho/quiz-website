@@ -9,3 +9,16 @@
 .show {
     display: block;
 }
+
+h2 {
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+}
+
+p {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+button, input {
+    outline: none;
+}
