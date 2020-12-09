@@ -23,6 +23,29 @@ button, input {
     outline: none;
 }
 
+#top-container {
+    background: rgb(242, 181, 28); 
+    padding: 30px;
+}
+
+#view-highscores {
+    color: black;
+    text-decoration: none;
+}
+
+#view-highscores:hover {
+    color: white;
+}
+
+#top-container div {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+#countdown-div {
+    float: right;
+}
+
 #questions, #complete, #highscores {
     width: 50%;
     margin: 0 auto;
