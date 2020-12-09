@@ -17,6 +17,8 @@ var userScoreEl = document.querySelector("#user-score");
 var userScoreMsgEl = document.querySelector("#user-score-msg");
 var userScore = 0;
 
+var highscoresDiv = document.querySelector("#highscores");
+
 var questionBin = [];
 
 
@@ -195,3 +197,22 @@ startBtn.addEventListener("click", timer);
 startBtn.addEventListener("click", showQuestions);
 answerBtnDiv.addEventListener("click", scoreIncrement);
 nextBtn.addEventListener("click", changeQuestions);
+
+var retakeBtn = document.querySelector("#retake");
+var highscoreLink = document.querySelector("#view-highscores");
+
+retakeBtn.addEventListener("click", function() {
+    questionArrIndex = 0;
+    userScore = 0;
+    timeLeft = 60; //Added 
+    startDiv.setAttribute("class", "show");
+    completeDiv.setAttribute("class", "hide");
+    highscoreLink.setAttribute("class", "show");
+})
+
+highscoreLink.addEventListener("click", function() {
+    startDiv.setAttribute("class", "hide");
+    highscoresDiv.setAttribute("class", "show");
+    highscoreLink.setAttribute("class", "hide");
+})
+
