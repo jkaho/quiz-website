@@ -184,3 +184,49 @@ input:focus {
     background: rgb(242, 181, 28);
     transition-duration: 0.3s;
 }
+
+ol {
+    padding: 40px 0 20px 0;
+}
+
+li {
+    font-family: 'JetBrains Mono', monospace;
+    background: rgb(255, 245, 211); 
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    line-height: 2em;
+}
+
+#highscore-list-buttons {
+    text-align: center;
+}
+
+#go-to-start, #clear-highscores {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid rgb(242, 181, 28);
+    height: 40px;
+    width: 200px;
+    margin: 0 20px;
+}
+
+#clear-highscores {
+    border: 2px solid rgb(181, 52, 52);
+}
+
+#go-to-start:hover {
+    color: white;
+    background: rgb(242, 181, 28);
+    transition-duration: 0.3s;
+}
+
+#clear-highscores:hover {
+    color: white;
+    background: rgb(181, 52, 52);
+    transition-duration: 0.3s;
+}
+
+
+
