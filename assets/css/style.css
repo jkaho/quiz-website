@@ -153,6 +153,7 @@ input {
     background: rgb(255, 245, 211);
     height: 28px;
     border: none;
+    border-radius: 0;
 }
 
 input:focus {

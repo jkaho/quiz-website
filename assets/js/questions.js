@@ -722,10 +722,10 @@ var questionArr = [
     {
         // questionNumber: "Media-1",
         question: "Which of the following TV shows has the most episodes?",
-        firstOption: "Jeopardy!",
-        secondOption: "Wheel of Fortune",
-        thirdOption: "Friends",
-        fourthOption: "The Bold and the Beautiful",
+        firstOption: "'Jeopardy'!",
+        secondOption: "'Wheel of Fortune'",
+        thirdOption: "'Friends'",
+        fourthOption: "'The Bold and the Beautiful'",
         correctAnswer: "#fourth-option"
     },
     {
