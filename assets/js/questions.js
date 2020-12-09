@@ -46,6 +46,24 @@ var questionArr = [
     },
     {
         // questionNumber: "Math-6",
+        question: "What is the formula for the area of a trapezium?",
+        firstOption: "1/2(a + b)h",
+        secondOption: "2(a + b)/h",
+        thirdOption: "h(a + b)²",
+        fourthOption: "1/2 × abh",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Math-7",
+        question: "How much larger is the volume of a 10m×5m×2m box than a 8m×4m×1m box?",
+        firstOption: "4m³",
+        secondOption: "36m³",
+        thirdOption: "68m³",
+        fourthOption: "132m³",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Math-8",
         question: "Choose the correct statement.",
         firstOption: "sinθ = opposite/adjacent",
         secondOption: "tanθ = hypotenuse/opposite",
@@ -54,7 +72,7 @@ var questionArr = [
         correctAnswer: "#third-option"
     },
     {
-        // questionNumber: "Math-7",
+        // questionNumber: "Math-9",
         question: "There are 10 people at a meeting. If each person shakes every other person's hand once, how many handshakes are there in total?",
         firstOption: "100",
         secondOption: "3628800",
@@ -63,7 +81,7 @@ var questionArr = [
         correctAnswer: "#fourth-option"
     },
     {
-        // questionNumber: "Math-8",
+        // questionNumber: "Math-10",
         question: "How many zeroes are there in ten trillion?",
         firstOption: "9",
         secondOption: "12",
@@ -72,7 +90,7 @@ var questionArr = [
         correctAnswer: "#second-option"
     },
     {
-        // questionNumber: "Math-9",
+        // questionNumber: "Math-11",
         question: "Which 3D shape does the formula (1/3)π × r²h give you the volume of?",
         firstOption: "Cone",
         secondOption: "Cylinder",
@@ -81,13 +99,31 @@ var questionArr = [
         correctAnswer: "#first-option"
     },
     {
-        // questionNumber: "Math-10",
+        // questionNumber: "Math-12",
         question: "How many seconds are there in 2 hours?",
         firstOption: "1800",
         secondOption: "3600",
         thirdOption: "7200",
         fourthOption: "10800",
         correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Math-13",
+        question: "Sam is 21 and his mum is 48. How many years are there until Sam is exactly half his mum's age?",
+        firstOption: "2",
+        secondOption: "4",
+        thirdOption: "6",
+        fourthOption: "12",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Math-15",
+        question: "How many days are there in a leap year?",
+        firstOption: "363",
+        secondOption: "364",
+        thirdOption: "365",
+        fourthOption: "366",
+        correctAnswer: "#fourth-option"
     },
     {
         // questionNumber: "English-1",
@@ -154,6 +190,24 @@ var questionArr = [
     },
     {
         // questionNumber: "English-8",
+        question: "Which of the following is a synonym for the word \"surmise\"?",
+        firstOption: "Surpass",
+        secondOption: "Deduce",
+        thirdOption: "Know",
+        fourthOption: "Acknowledge",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "English-9",
+        question: "Which of the following is a synonym for the word \"tacit\"?",
+        firstOption: "Explicit",
+        secondOption: "Inferred",
+        thirdOption: "Said",
+        fourthOption: "Tactic",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "English-11",
         question: "Which of the following is NOT an example of tautology?",
         firstOption: "Either it will or it won't.",
         secondOption: "Recently, the Australian dollar has depreciated in value.",
@@ -162,7 +216,7 @@ var questionArr = [
         correctAnswer: "#fourth-option"
     },
     {
-        // questionNumber: "English-9",
+        // questionNumber: "English-12",
         question: "Which of the following is an antonym for the word \"consider\"?",
         firstOption: "Dismiss",
         secondOption: "Contemplate",
@@ -171,13 +225,31 @@ var questionArr = [
         correctAnswer: "#first-option"
     },
     {
-        // questionNumber: "English-10",
+        // questionNumber: "English-13",
+        question: "Which of the following is an antonym for the word \"discord\"?",
+        firstOption: "Agreement",
+        secondOption: "Happiness",
+        thirdOption: "Conflict",
+        fourthOption: "Hostility",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "English-14",
         question: "How many consonants are there in the word \"library\"?",
         firstOption: "2",
         secondOption: "3",
         thirdOption: "4",
         fourthOption: "5",
         correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "English-15",
+        question: "Which of the following is NOT an example of a metaphor?",
+        firstOption: "He has a heart of gold.",
+        secondOption: "The world's your oyster.",
+        thirdOption: "She's as fast as a cheetah.",
+        fourthOption: "Pizza is happiness on a plate.",
+        correctAnswer: "#third-option"
     },
     {
         // questionNumber: "History-1",
@@ -898,5 +970,50 @@ var questionArr = [
         thirdOption: "Exosphere",
         fourthOption: "Mesosphere",
         correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Science-11",
+        question: "What kind of colour is fuchsia?",
+        firstOption: "Bluish green",
+        secondOption: "Yellowish green",
+        thirdOption: "Purplish red",
+        fourthOption: "Pinkish purple",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Science-12",
+        question: "What is the best definition of kinetic energy?",
+        firstOption: "Energy stored within an object that is at rest",
+        secondOption: "Energy that an object possesses due to its motion",
+        thirdOption: "Energy created by heat",
+        fourthOption: "Energy from the sun",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Science-13",
+        question: "Which of the following is NOT a source of renewable energy?",
+        firstOption: "Sunlight",
+        secondOption: "Wind",
+        thirdOption: "Tides",
+        fourthOption: "Natural gases",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "Science-14",
+        question: "Which of the following is NOT a type of cloud?",
+        firstOption: "Columbus",
+        secondOption: "Cirrus",
+        thirdOption: "Nimbus",
+        fourthOption: "Stratus",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Science-15",
+        question: "Which of the following is closest to the depth of the Mariana Trench?",
+        firstOption: "1km (0.6mi)",
+        secondOption: "4km (2.5mi)",
+        thirdOption: "8km (5mi)",
+        fourthOption: "11km (7mi)",
+        correctAnswer: "#fourth-option"
     },
 ]
