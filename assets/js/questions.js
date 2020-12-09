@@ -342,6 +342,24 @@ var questionArr = [
         correctAnswer: "#third-option"
     },
     {
+        // questionNumber: "History-11",
+        question: "Which of the following titles is not a play by Shakespeare?",
+        firstOption: "The Merchant of Venice",
+        secondOption: "Much Ado About Nothing",
+        thirdOption: "Oedipus Rex",
+        fourthOption: "Hamlet",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "History-12",
+        question: "Which of the following countries was not one of the principal Allied powers in World War I?",
+        firstOption: "Japan",
+        secondOption: "United Kingdom",
+        thirdOption: "China",
+        fourthOption: "France",
+        correctAnswer: "#third-option"
+    },
+    {
         // questionNumber: "Language-1",
         question: "What is the traditional translation for the French phrase \"Qu'ils mangent de la brioche\"?",
         firstOption: "An apple a day keeps the doctor away",
