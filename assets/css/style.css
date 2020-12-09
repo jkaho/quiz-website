@@ -54,3 +54,27 @@ button, input {
 #main-container {
     margin: 100px auto;
 }
+
+#start-btn-div {
+    text-align: center;
+}
+
+#start p {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#start-btn-div button {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    border: 3px solid rgb(242, 181, 28);
+    height: 40px;
+    width: 150px;
+}
+
+#start-btn-div button:hover {
+    color: white;
+    background: rgb(242, 181, 28);
+    transition-duration: 0.3s;
+}
