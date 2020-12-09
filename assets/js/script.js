@@ -111,6 +111,28 @@ function changeQuestions(event) {
         fourthBtn.textContent = currentQuestion.fourthOption;
                 
     } else {
+        userScoreEl.textContent = userScore + " out of " + 20 + " points";
+        if (userScore <= 3) {
+            userScoreMsgEl.textContent = "... Really?";
+        } else if (userScore > 3 && userScore <= 5) {
+            userScoreMsgEl.textContent = "... Have another go.";
+        } else if (userScore > 5 && userScore <= 7) {
+            userScoreMsgEl.textContent = "... How many did you need to guess?";
+        } else if (userScore > 7 && userScore <= 9) {
+            userScoreMsgEl.textContent = "... You can do better.";
+        } else if (userScore > 9 && userScore <= 11) {
+            userScoreMsgEl.textContent = ", not bad, but not great either.";
+        } else if (userScore > 11 && userScore <= 13) {
+            userScoreMsgEl.textContent = ", good job!";
+        } else if (userScore > 13 && userScore <= 15) {
+            userScoreMsgEl.textContent = ", you're pretty knowledgeable!";
+        } else if (userScore > 15 && userScore <= 17) {
+            userScoreMsgEl.textContent = ", wow, impressive!";
+        } else if (userScore > 17 && userScore <= 19) {
+            userScoreMsgEl.textContent = ", you cheated, didn't you?";
+        } else {
+            userScoreMsgEl.textContent = "... WHO ARE YOU?!";
+        }
         questionsDiv.setAttribute("class", "hide");
         completeDiv.setAttribute("class", "show");
         questionBin = [];
@@ -129,11 +151,38 @@ function timer() {
         if (timeLeft < 0) {
             clearInterval(timerVar);
             countdownEl.innerHTML = 0;
+            completeMsg.textContent = "Sorry, time's up!"
+
+            userScoreEl.textContent = userScore + " out of " + 20 + " points";
+            if (userScore <= 3) {
+                userScoreMsgEl.textContent = "... Really?";
+            } else if (userScore > 3 && userScore <= 5) {
+                userScoreMsgEl.textContent = "... Have another go.";
+            } else if (userScore > 5 && userScore <= 7) {
+                userScoreMsgEl.textContent = "... How many did you need to guess?";
+            } else if (userScore > 7 && userScore <= 9) {
+                userScoreMsgEl.textContent = "... You can do better.";
+            } else if (userScore > 9 && userScore <= 11) {
+                userScoreMsgEl.textContent = ", not bad, but not great either.";
+            } else if (userScore > 11 && userScore <= 13) {
+                userScoreMsgEl.textContent = ", good job!";
+            } else if (userScore > 13 && userScore <= 15) {
+                userScoreMsgEl.textContent = ", you're pretty knowledgeable!";
+            } else if (userScore > 15 && userScore <= 17) {
+                userScoreMsgEl.textContent = ", wow, impressive!";
+            } else if (userScore > 17 && userScore <= 19) {
+                userScoreMsgEl.textContent = ", you cheated, didn't you?";
+            } else {
+                userScoreMsgEl.textContent = "... WHO ARE YOU?!";
+            }
             questionsDiv.setAttribute("class", "hide");
             completeDiv.setAttribute("class", "show");
             questionBin = [];
             questionCounter = 20;
             questionNumber = 1;
+            timeLeft = 120;
+        } else if (completeDiv.className === "show") {
+            clearInterval(timerVar);
             timeLeft = 120;
         } else {
             countdownEl.innerHTML = timeLeft;
