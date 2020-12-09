@@ -67,15 +67,25 @@ function scoreIncrement(event) {
         if (questionNumber == 1 && event.target.matches(startQuestion.correctAnswer) === true) {
             userScore++;
 
+            event.target.setAttribute("style", "border: 2px solid rgb(116, 222, 116)");
         } else if (questionNumber == 1 && event.target.matches(startQuestion.correctAnswer) === false){
             timeLeft -= 5;
 
+            event.target.setAttribute("style", "border: 2px solid rgb(218, 72, 72)");
+
+            var correctBtn = document.querySelector(startQuestion.correctAnswer);
+            correctBtn.setAttribute("style", "border: 2px solid rgb(116, 222, 116)"); // set border
         } else if (event.target.matches(currentQuestion.correctAnswer) === true) {
             userScore++;
-
+    
+            event.target.setAttribute("style", "border: 2px solid rgb(116, 222, 116)");
         } else {
             timeLeft -= 5;
-        
+
+            event.target.setAttribute("style", "border: 2px solid rgb(218, 72, 72)");
+    
+            var correctBtn = document.querySelector(currentQuestion.correctAnswer);
+            correctBtn.setAttribute("style", "border: 2px solid rgb(116, 222, 116)");
         }
         firstBtn.setAttribute("disabled", "disabled");
         secondBtn.setAttribute("disabled", "disabled");
@@ -89,6 +99,11 @@ function changeQuestions(event) {
     event.preventDefault();
     event.stopPropagation();
     nextDiv.setAttribute("class", "hide");
+
+    firstBtn.setAttribute("style", "border: none");
+    secondBtn.setAttribute("style", "border: none");
+    thirdBtn.setAttribute("style", "border: none");
+    fourthBtn.setAttribute("style", "border: none");
 
     firstBtn.removeAttribute("disabled");
     secondBtn.removeAttribute("disabled");
