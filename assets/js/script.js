@@ -294,7 +294,7 @@ submitBtn.addEventListener("click", function(event) {
     };
     
     if (user.userName === "") {
-        inputMessageEl.textContent = "You can't submit your score without a name";
+        inputMessageEl.textContent = "You can't submit your score without your initials";
         return;
     } 
   
