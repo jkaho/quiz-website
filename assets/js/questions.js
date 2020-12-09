@@ -178,5 +178,95 @@ var questionArr = [
         thirdOption: "4",
         fourthOption: "5",
         correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "History-1",
+        question: "What year was Julius Caesar born?",
+        firstOption: "1200BC",
+        secondOption: "100BC",
+        thirdOption: "100AD",
+        fourthOption: "1200AD",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "History-2",
+        question: "In what year did World War I start?",
+        firstOption: "1900",
+        secondOption: "1901",
+        thirdOption: "1910",
+        fourthOption: "1914",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "History-3",
+        question: "In what year was the first successful airplane invented?",
+        firstOption: "1903",
+        secondOption: "1910",
+        thirdOption: "1912",
+        fourthOption: "1923",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "History-4",
+        question: "How many years did the Vietnam War last?",
+        firstOption: "1",
+        secondOption: "8",
+        thirdOption: "12",
+        fourthOption: "19",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "History-5",
+        question: "Where was the United Nations founded?",
+        firstOption: "New York",
+        secondOption: "Geneva",
+        thirdOption: "San Francisco",
+        fourthOption: "Bern",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "History-6",
+        question: "Who of the following was not a Greek philosopher?",
+        firstOption: "Aristotle",
+        secondOption: "Plato",
+        thirdOption: "Descartes",
+        fourthOption: "Socrates",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "History-7",
+        question: "In which century did the French Revolution take place?",
+        firstOption: "16th century",
+        secondOption: "17th century",
+        thirdOption: "18th century",
+        fourthOption: "19th century",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "History-8",
+        question: "In what year was 'The Communist Manifesto' published?",
+        firstOption: "1835",
+        secondOption: "1848",
+        thirdOption: "1876",
+        fourthOption: "1906",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "History-9",
+        question: "Who wrote the novel 'War and Peace'?",
+        firstOption: "Leo Tolstoy",
+        secondOption: "Fyodor Dostoevsky",
+        thirdOption: "Ivan Turgenev",
+        fourthOption: "Vladimir Nabokov",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "History-10",
+        question: "What year did the American Civil War end?",
+        firstOption: "1823",
+        secondOption: "1861",
+        thirdOption: "1865",
+        fourthOption: "1897",
+        correctAnswer: "#third-option"
     }
 ]

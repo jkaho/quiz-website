@@ -8,10 +8,17 @@ var firstBtn = document.querySelector("#first-option");
 var secondBtn = document.querySelector("#second-option");
 var thirdBtn = document.querySelector("#third-option");
 var fourthBtn = document.querySelector("#fourth-option");
-
 var questionCounter = 20;
 var questionNumber = 1;
+
+var completeDiv = document.querySelector("#complete");
+var completeMsg = document.querySelector("#complete-msg");
+var userScoreEl = document.querySelector("#user-score");
+var userScoreMsgEl = document.querySelector("#user-score-msg");
+var userScore = 0;
+
 var questionBin = [];
+
 
 var startIndex = Math.floor(Math.random() * questionArr.length);
 var startQuestion = questionArr[startIndex];
@@ -19,18 +26,16 @@ questionBin.push(startIndex);
 
 function showQuestions(event) {
     event.preventDefault();
-        questionCounter--; // 14 
+        questionCounter--; 
         questionNumberEl.textContent = questionNumber;
         questionTextEl.textContent = startQuestion.question;
         firstBtn.textContent = startQuestion.firstOption;
         secondBtn.textContent = startQuestion.secondOption;
         thirdBtn.textContent = startQuestion.thirdOption;
         fourthBtn.textContent = startQuestion.fourthOption;
-        // questionNumber++; // 2
 
         startDiv.setAttribute("class", "hide");
         questionsDiv.setAttribute("class", "show");
-        console.log(startIndex);
 }
 
 var currentIndex = Math.floor(Math.random() * questionArr.length); // Question 2
@@ -46,8 +51,9 @@ function checkBin() {
 checkBin();
 questionBin.push(currentIndex);
 
-var userScore = 0;
 var answerBtnDiv = document.querySelector("#answer-buttons");
+var nextBtn = document.querySelector("#next-question");
+var nextDiv = document.querySelector("#next-div");
 
 function scoreIncrement(event) {
     event.preventDefault();
@@ -69,38 +75,46 @@ function scoreIncrement(event) {
             timeLeft -= 5;
         
         }
-        console.log(userScore);
-    }
+        firstBtn.setAttribute("disabled", "disabled");
+        secondBtn.setAttribute("disabled", "disabled");
+        thirdBtn.setAttribute("disabled", "disabled");
+        fourthBtn.setAttribute("disabled", "disabled");
+        nextDiv.setAttribute("class", "show");
+    } 
 }
-
-
-var nextBtn = document.querySelector("#next-question");
-var nextDiv = document.querySelector("#next-div");
 
 function changeQuestions(event) { 
     event.preventDefault();
     event.stopPropagation();
-    
+    nextDiv.setAttribute("class", "hide");
+
+    firstBtn.removeAttribute("disabled");
+    secondBtn.removeAttribute("disabled");
+    thirdBtn.removeAttribute("disabled");
+    fourthBtn.removeAttribute("disabled");
+
     var currentQuestion = questionArr[currentIndex];
-    
     
     currentIndex = Math.floor(Math.random() * questionArr.length);
     checkBin();
     questionBin.push(currentIndex);
     currentQuestion = questionArr[currentIndex];
     
-    
     if (questionCounter > 0) {
         questionCounter--;
         questionNumber++;
         questionNumberEl.textContent = questionNumber;
         questionTextEl.textContent = currentQuestion.question;
-        firstBtn.textContent = currentQuestion.firstOption;
+        firstBtn.textContent = currentQuestion.firstOption;            
         secondBtn.textContent = currentQuestion.secondOption;
         thirdBtn.textContent = currentQuestion.thirdOption;
         fourthBtn.textContent = currentQuestion.fourthOption;
-            
-    } 
+                
+    } else {
+        questionsDiv.setAttribute("class", "hide");
+        completeDiv.setAttribute("class", "show");
+        return;  
+    }
 }
 
 var countdownEl = document.querySelector("#countdown");
@@ -124,5 +138,5 @@ function timer() {
 
 startBtn.addEventListener("click", timer);
 startBtn.addEventListener("click", showQuestions);
-nextBtn.addEventListener("click", changeQuestions);
 answerBtnDiv.addEventListener("click", scoreIncrement);
+nextBtn.addEventListener("click", changeQuestions);
