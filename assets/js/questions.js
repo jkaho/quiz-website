@@ -360,6 +360,33 @@ var questionArr = [
         correctAnswer: "#third-option"
     },
     {
+        // questionNumber: "History-13",
+        question: "How many wives did Henry VIII have?",
+        firstOption: "1",
+        secondOption: "3",
+        thirdOption: "6",
+        fourthOption: "12",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "History-14",
+        question: "In what year did the British Raj in India end?",
+        firstOption: "1858",
+        secondOption: "1900",
+        thirdOption: "1925",
+        fourthOption: "1947",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "History-15",
+        question: "Who was the 40th President of the United States?",
+        firstOption: "John F. Kennedy",
+        secondOption: "Ronald Reagan",
+        thirdOption: "Bill Clinton",
+        fourthOption: "Barack Obama",
+        correctAnswer: "#second-option"
+    },
+    {
         // questionNumber: "Language-1",
         question: "What is the traditional translation for the French phrase \"Qu'ils mangent de la brioche\"?",
         firstOption: "An apple a day keeps the doctor away",
@@ -448,6 +475,51 @@ var questionArr = [
         thirdOption: "French",
         fourthOption: "Miskito",
         correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Language-11",
+        question: "What is the meaning of the French word \"triste\"?",
+        firstOption: "Sad",
+        secondOption: "Happy",
+        thirdOption: "Excited",
+        fourthOption: "Bored",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Language-12",
+        question: "What is the Japanese word for the number \"8\"?",
+        firstOption: "Ichi",
+        secondOption: "Hachi",
+        thirdOption: "Roku",
+        fourthOption: "Kyuu",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "Language-13",
+        question: "In Italian, \"quindici\" is which of the following numbers?",
+        firstOption: "5",
+        secondOption: "6",
+        thirdOption: "15",
+        fourthOption: "16",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Language-14",
+        question: "How many letters are in the Greek alphabet?",
+        firstOption: "20",
+        secondOption: "22",
+        thirdOption: "24",
+        fourthOption: "26",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Language-15",
+        question: "How many Chinese radicals are there?",
+        firstOption: "200",
+        secondOption: "214",
+        thirdOption: "268",
+        fourthOption: "345",
+        correctAnswer: "#second-option"
     },
     {
         // questionNumber: "Geography-1",
@@ -540,6 +612,51 @@ var questionArr = [
         correctAnswer: "#third-option"
     },
     {
+        // questionNumber: "Geography-11",
+        question: "Which of the following is closest to the shortest distance from New York to Los Angeles?",
+        firstOption: "2,500km (1,550mi)",
+        secondOption: "3,000km (1,865mi)",
+        thirdOption: "3,500km (2,175mi)",
+        fourthOption: "4,000km (2,485mi)",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "Geography-12",
+        question: "Which of the following cities is closest to Beijing?",
+        firstOption: "Shanghai",
+        secondOption: "Guangzhou",
+        thirdOption: "Tokyo",
+        fourthOption: "Kunming",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Geography-13",
+        question: "Which of the following cities is closest to Tokyo?",
+        firstOption: "Osaka",
+        secondOption: "Hokkaido",
+        thirdOption: "Sapporo",
+        fourthOption: "Yokohama",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "Geography-14",
+        question: "According to the United Nations 2018 estimates, what is the most populated city in the world?",
+        firstOption: "Tokyo",
+        secondOption: "Shanghai",
+        thirdOption: "Delhi",
+        fourthOption: "Mexico City",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Geography-15",
+        question: "Which of the following countries does NOT border the Red Sea?",
+        firstOption: "Saudi Arabia",
+        secondOption: "Egypt",
+        thirdOption: "Yemen",
+        fourthOption: "India",
+        correctAnswer: "#fourth-option"
+    },
+    {
         // questionNumber: "Animals-1",
         question: "What is the largest type of whale?",
         firstOption: "Blue whale",
@@ -628,6 +745,51 @@ var questionArr = [
         thirdOption: "Toy poodle",
         fourthOption: "Yorkshire terrier",
         correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Animals-11",
+        question: "What is the breed name of a Cavalier King Charles Spaniel crossed with a Poodle?",
+        firstOption: "King Poodle",
+        secondOption: "Spanoodle",
+        thirdOption: "Cavoodle",
+        fourthOption: "Cavadoodle",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Animals-12",
+        question: "Which of the following is the name for a male deer?",
+        firstOption: "Mandeer",
+        secondOption: "Buck",
+        thirdOption: "Chuck",
+        fourthOption: "Doe",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "Animals-13",
+        question: "What is a \"Ruminant\" animal?",
+        firstOption: "Herbivorous mammals that have a rumen compartment in their stomachs",
+        secondOption: "Omnivorous mammals that mainly acquire nutrients from plants",
+        thirdOption: "Herbivorous mammals that eat insects",
+        fourthOption: "Animals that can camouflage",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Animals-14",
+        question: "What is the record speed for a 100m sprint, held by a cheetah?",
+        firstOption: "4.55 seconds",
+        secondOption: "5.95 seconds",
+        thirdOption: "7.90 seconds",
+        fourthOption: "8.95 seconds",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "Animals-15",
+        question: "What kind of bird has been recorded stooping at speeds of over 320km/h (200mph)?",
+        firstOption: "Bald eagle",
+        secondOption: "Peregrine falcon",
+        thirdOption: "Anna's hummingbird",
+        fourthOption: "Common swift",
+        correctAnswer: "#second-option"
     },
     {
         // questionNumber: "Food-1",
@@ -720,6 +882,51 @@ var questionArr = [
         correctAnswer: "#first-option"
     },
     {
+        // questionNumber: "Food-11",
+        question: "Which of the following foods is NOT a category of lentil?",
+        firstOption: "Brown lentils",
+        secondOption: "Green lentils",
+        thirdOption: "Red/Yellow lentils",
+        fourthOption: "Blue lentils",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "Food-12",
+        question: "What fruit does Black Forest contain?",
+        firstOption: "Cherries",
+        secondOption: "Apples",
+        thirdOption: "Oranges",
+        fourthOption: "Blackberries",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Food-13",
+        question: "Which of the following ingredients is NOT found on a traditional capricciosa-style pizza?",
+        firstOption: "Pepperoni",
+        secondOption: "Mushroom",
+        thirdOption: "Ham",
+        fourthOption: "Artichoke",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Food-14",
+        question: "How is a \"sunny-side up\" egg cooked?",
+        firstOption: "Fried on both sides",
+        secondOption: "Fried on one side with the yolk facing up",
+        thirdOption: "Cracked straight into boiling water",
+        fourthOption: "Microwaved",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "Food-15",
+        question: "What does the culinary term \"macronage\" refer to?",
+        firstOption: "Baking a cake in a water bath",
+        secondOption: "Pushing cake batter through a strainer",
+        thirdOption: "Beating egg whites",
+        fourthOption: "Mixing macaron batter in a certain way",
+        correctAnswer: "#fourth-option"
+    },
+    {
         // questionNumber: "Media-1",
         question: "Which of the following TV shows has the most episodes?",
         firstOption: "'Jeopardy'!",
@@ -766,7 +973,7 @@ var questionArr = [
     },
     {
         // questionNumber: "Media-6",
-        question: "What type pokémon is 'Meganium'?",
+        question: "What type Pokémon is 'Meganium'?",
         firstOption: "Fire",
         secondOption: "Grass",
         thirdOption: "Water",
@@ -808,6 +1015,51 @@ var questionArr = [
         thirdOption: "Ron Weasley",
         fourthOption: "Draco Malfoy",
         correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Media-11",
+        question: "Which of the following TV sitcoms is the character Dwight Schrute from?",
+        firstOption: "'The Office'",
+        secondOption: "'How I Met Your Mother'",
+        thirdOption: "'Parks and Recreation'",
+        fourthOption: "'The Big Bang Theory'",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Media-12",
+        question: "Which of the following animated TV series is not Japanese?",
+        firstOption: "'Sailor Moon'",
+        secondOption: "'Teen Titans'",
+        thirdOption: "'Cardcaptor Sakura'",
+        fourthOption: "'Pokémon'",
+        correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "Media-13",
+        question: "Which is the third book in 'The Chronicles of Narnia'?",
+        firstOption: "'The Silver Chair'",
+        secondOption: "'The Lion, the Witch and the Wardrobe'",
+        thirdOption: "'Prince Caspian: The Return to Narnia'",
+        fourthOption: "'The Voyage of the Dawn Treader'",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "Media-14",
+        question: "Which of the following is NOT one of the fictional peoples and races in 'The Lord of the Rings' series?",
+        firstOption: "Fairies",
+        secondOption: "Elves",
+        thirdOption: "Orcs",
+        fourthOption: "Hobbits",
+        correctAnswer: "#first-option"
+    },
+    {
+        // questionNumber: "Media-15",
+        question: "In the film 'The Day After Tomorrow', where did Samuel Hall seek shelter?",
+        firstOption: "A shopping mall",
+        secondOption: "A library",
+        thirdOption: "His home",
+        fourthOption: "His car",
+        correctAnswer: "#second-option"
     },
     {
         // questionNumber: "Sports-1",
@@ -898,6 +1150,51 @@ var questionArr = [
         thirdOption: "A score of three under par",
         fourthOption: "A score of one over par",
         correctAnswer: "#second-option"
+    },
+    {
+        // questionNumber: "Sports-11",
+        question: "Where were the 2012 Summer Olympics held?",
+        firstOption: "Sydney",
+        secondOption: "Beijing",
+        thirdOption: "London",
+        fourthOption: "Rio de Janeiro",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Sports-12",
+        question: "Which of the following sports is NOT part of the Olympic Games?",
+        firstOption: "Baseball",
+        secondOption: "Tennis",
+        thirdOption: "Badminton",
+        fourthOption: "Cricket",
+        correctAnswer: "#fourth-option"
+    },
+    {
+        // questionNumber: "Sports-13",
+        question: "Which of the following karate belts is the lowest ranked?",
+        firstOption: "Green",
+        secondOption: "Orange",
+        thirdOption: "Yellow",
+        fourthOption: "Blue",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Sports-14",
+        question: "Which volleyball position usually belongs to the tallest player on the team?",
+        firstOption: "Setter",
+        secondOption: "Outside hitter",
+        thirdOption: "Middle blocker",
+        fourthOption: "Libero",
+        correctAnswer: "#third-option"
+    },
+    {
+        // questionNumber: "Sports-15",
+        question: "What does \"carrying the ball\" refer to in basketball?",
+        firstOption: "Touching the bottom-side of the ball while dribbling.",
+        secondOption: "Holding the ball while moving on two feet.",
+        thirdOption: "Holding the ball without moving for over 3 seconds.",
+        fourthOption: "Constantly passing the ball back and forth between players.",
+        correctAnswer: "#first-option"
     },
     {
         // questionNumber: "Science-1",
