@@ -43,11 +43,26 @@ var startIndex = Math.floor(Math.random() * questionArr.length);
 var startQuestion = questionArr[startIndex];
 questionBin.push(startIndex);
 
+// check that the start index number hasn't already been used (i.e. user plays quiz more than once)
+function checkBinStart() {
+    for (var i = 0; i < 1; i++) {
+        if (questionBin.includes(startIndex)) {
+            startIndex = Math.floor(Math.random() * questionArr.length);
+            i--;
+        } 
+    }
+}
+
 // show question 1 when start button is clicked (event listener at line 289) 
 function showQuestions(event) {
     event.preventDefault();
 
     questionCounter--; 
+
+    startIndex = Math.floor(Math.random() * questionArr.length);
+    checkBinStart();
+    startQuestion = questionArr[startIndex];
+    questionBin.push(startIndex);
 
     questionNumberEl.textContent = questionNumber;
     questionTextEl.textContent = startQuestion.question;
@@ -65,7 +80,7 @@ function showQuestions(event) {
 var currentIndex = Math.floor(Math.random() * questionArr.length);
 var currentQuestion = questionArr[currentIndex];
 
-// check that index number hasn't already been used
+// check that the current index number hasn't already been used
 function checkBin() {
     for (var i = 0; i < 1; i++) {
         if (questionBin.includes(currentIndex) && questionBin.length < 21) {
@@ -238,7 +253,6 @@ function countdown() {
             timeLeft = 120;
         } else if (completeDiv.className === "show") {
             clearInterval(timerVar);
-            timeLeft = 120;
         } else {
             countdownEl.innerHTML = timeLeft;
         }
