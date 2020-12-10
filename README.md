@@ -7,7 +7,7 @@ This is a multiple-choice quiz web application designed purely for entertainment
 ## Screenshots
 
 ### Start menu
-![Quiz start menu screenshot](assets/images/start-screenshot.png)
+![Quiz start menu screenshot]()
 
 ### Quiz questions
 ![Quiz questions screenshot](assets/images/question-screenshot.png)
