@@ -37,13 +37,64 @@ var questionCounter = 20;
 var questionNumber = 1;
 var questionBin = [];
 var userScore = 0;
+var timeLeft = 120;
+
+// countdown element 
+var countdownEl = document.querySelector("#countdown");
+
+// countdown begins when start button is clicked (event listener at line 302)
+function countdown() {
+    var timerVar = setInterval(function() {
+        if (timeLeft < 0) {
+            clearInterval(timerVar);
+            countdownEl.innerHTML = 0;
+            completeMsg.textContent = "Sorry, time's up!"
+
+            userScoreEl.textContent = userScore + " out of " + 20 + " points";
+            if (userScore <= 3) {
+                userScoreMsgEl.textContent = "... Really?";
+            } else if (userScore > 3 && userScore <= 5) {
+                userScoreMsgEl.textContent = "... Have another go.";
+            } else if (userScore > 5 && userScore <= 7) {
+                userScoreMsgEl.textContent = "... How many did you need to guess?";
+            } else if (userScore > 7 && userScore <= 9) {
+                userScoreMsgEl.textContent = "... You can do better.";
+            } else if (userScore > 9 && userScore <= 11) {
+                userScoreMsgEl.textContent = ", not bad, but not great either.";
+            } else if (userScore > 11 && userScore <= 13) {
+                userScoreMsgEl.textContent = ", good job!";
+            } else if (userScore > 13 && userScore <= 15) {
+                userScoreMsgEl.textContent = ", you're pretty knowledgeable!";
+            } else if (userScore > 15 && userScore <= 17) {
+                userScoreMsgEl.textContent = ", wow, impressive!";
+            } else if (userScore > 17 && userScore <= 19) {
+                userScoreMsgEl.textContent = ", you cheated, didn't you?";
+            } else {
+                userScoreMsgEl.textContent = "... WHO ARE YOU!?";
+            }
+
+            questionsDiv.setAttribute("class", "hide");
+            completeDiv.setAttribute("class", "show");
+            
+            questionBin = [];
+            questionCounter = 20;
+            questionNumber = 1;
+            timeLeft = 120;
+        } else if (completeDiv.className === "show") {
+            clearInterval(timerVar);
+        } else {
+            countdownEl.innerHTML = timeLeft;
+        }
+        timeLeft--;
+    }, 1000);
+}
 
 // question array index number generator for question 1
 var startIndex = Math.floor(Math.random() * questionArr.length);
 var startQuestion = questionArr[startIndex];
 questionBin.push(startIndex);
 
-// check that the start index number hasn't already been used (i.e. user plays quiz more than once)
+// check that the start index number hasn't already been used (for when user plays quiz more than once)
 function checkBinStart() {
     for (var i = 0; i < 1; i++) {
         if (questionBin.includes(startIndex)) {
@@ -53,7 +104,7 @@ function checkBinStart() {
     }
 }
 
-// show question 1 when start button is clicked (event listener at line 289) 
+// show question 1 when start button is clicked (event listener at line 303) 
 function showQuestions(event) {
     event.preventDefault();
 
@@ -93,7 +144,7 @@ function checkBin() {
 checkBin();
 questionBin.push(currentIndex);
 
-// increment score for correct answers when an answer button is clicked (event listener at line 290)
+// increment score or deduct time when an answer button is clicked (event listener at line 304)
 function scoreIncrement(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -140,7 +191,7 @@ function scoreIncrement(event) {
     } 
 }
 
-// change questions when next button is clicked (event listener at line 291)
+// change questions when next button is clicked (event listener at line 305)
 function changeQuestions(event) { 
     event.preventDefault();
     event.stopPropagation();
@@ -209,63 +260,12 @@ function changeQuestions(event) {
     }
 }
 
-// countdown variables 
-var countdownEl = document.querySelector("#countdown");
-var timeLeft = 120;
-
-// countdown begins when start button is clicked (event listener at line 288)
-function countdown() {
-    var timerVar = setInterval(function() {
-        if (timeLeft < 0) {
-            clearInterval(timerVar);
-            countdownEl.innerHTML = 0;
-            completeMsg.textContent = "Sorry, time's up!"
-
-            userScoreEl.textContent = userScore + " out of " + 20 + " points";
-            if (userScore <= 3) {
-                userScoreMsgEl.textContent = "... Really?";
-            } else if (userScore > 3 && userScore <= 5) {
-                userScoreMsgEl.textContent = "... Have another go.";
-            } else if (userScore > 5 && userScore <= 7) {
-                userScoreMsgEl.textContent = "... How many did you need to guess?";
-            } else if (userScore > 7 && userScore <= 9) {
-                userScoreMsgEl.textContent = "... You can do better.";
-            } else if (userScore > 9 && userScore <= 11) {
-                userScoreMsgEl.textContent = ", not bad, but not great either.";
-            } else if (userScore > 11 && userScore <= 13) {
-                userScoreMsgEl.textContent = ", good job!";
-            } else if (userScore > 13 && userScore <= 15) {
-                userScoreMsgEl.textContent = ", you're pretty knowledgeable!";
-            } else if (userScore > 15 && userScore <= 17) {
-                userScoreMsgEl.textContent = ", wow, impressive!";
-            } else if (userScore > 17 && userScore <= 19) {
-                userScoreMsgEl.textContent = ", you cheated, didn't you?";
-            } else {
-                userScoreMsgEl.textContent = "... WHO ARE YOU!?";
-            }
-
-            questionsDiv.setAttribute("class", "hide");
-            completeDiv.setAttribute("class", "show");
-            
-            questionBin = [];
-            questionCounter = 20;
-            questionNumber = 1;
-            timeLeft = 120;
-        } else if (completeDiv.className === "show") {
-            clearInterval(timerVar);
-        } else {
-            countdownEl.innerHTML = timeLeft;
-        }
-        timeLeft--;
-    }, 1000);
-}
-
 // ------------------ client-side storage for scores ------------------ //
 var userScores = [];
 
 initialise();
 
-// render stored scores into list (refer to line 310)
+// render stored scores into list (refer to event listener at line 326)
 function renderScores() {
     highscoreList.innerHTML = "";
     var sortedUserScores = userScores.sort(function(a, b) {
@@ -293,7 +293,7 @@ function initialise() {
     renderScores();
 }
 
-// store scores in local storage (refer to line 310)
+// store scores in local storage (refer to event listener line 326)
 function storeScores() {
     localStorage.setItem("userScores", JSON.stringify(userScores));
 }
@@ -315,6 +315,7 @@ retakeBtn.addEventListener("click", function() {
     questionArrIndex = 0;
     userScore = 0;
     timeLeft = 120; 
+    countdownEl.innerHTML = 120;
     inputMessageEl.textContent = "";
 
     startDiv.setAttribute("class", "show");
@@ -349,6 +350,7 @@ submitBtn.addEventListener("click", function(event) {
 returnBtn.addEventListener("click", function() {
     questionArrIndex = 0;
     userScore = 0;
+    countdownEl.innerHTML = 120;
     inputMessageEl.textContent = "";
     
     highscoresDiv.setAttribute("class", "hide");
