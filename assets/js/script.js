@@ -365,9 +365,9 @@ clearBtn.addEventListener("click", function() {
         if (confirmClear) {
             localStorage.clear();
             highscoreList.textContent = "";
+            userScores = [];
         } else {
             return;
         }
     }
-    
 });
