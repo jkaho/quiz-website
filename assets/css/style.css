@@ -245,6 +245,10 @@ li {
 
 /* small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) { 
+    #main-container {
+        padding: 0 20px;
+    }
+    
     #questions, #complete, #highscores {
         width: 80%;
         margin: 0 auto;
