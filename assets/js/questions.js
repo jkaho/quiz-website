@@ -946,7 +946,7 @@ var questionArr = [
     },
     {
         // questionNumber: "Media-3",
-        question: "Which of the following films is the high-grossing?",
+        question: "Which of the following films is the highest-grossing?",
         firstOption: "'Frozen'",
         secondOption: "'Avengers: Infinity War'",
         thirdOption: "'Star Wars: The Force Awakens'",
