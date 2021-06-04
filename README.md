@@ -8,9 +8,10 @@ This is a multiple-choice quiz web application designed purely for entertainment
 
 ## List of technologies used
 
+- JavaScript
+- localStorage 
 - HTML
 - CSS 
-- JavaScript 
 - Bootstrap
 - Google Fonts
 - Font Awesome 
